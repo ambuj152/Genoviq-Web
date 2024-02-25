@@ -1,0 +1,378 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+ }
+.nav{
+    font-size: 20px;
+    padding-left: 10%;
+    background-color: indigo;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10%;
+    
+   
+    
+}
+
+.logo
+{
+font-size: 40px;
+font-family:'Courier New', Courier, monospace;
+color: white;
+font-weight: 600;
+}
+ .nav ul{
+    display: flex;
+    list-style: none;
+ }
+.nav ul li a {
+   
+    padding-left: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    
+}
+.nav ul li a:hover{
+ background-color: purple;
+ font-style: oblique;
+ border-radius: 5px;
+
+}
+
+nav .menu-btn{ color: white;
+font-size: 22px;
+cursor: pointer;
+display: none;}
+
+#click{
+    display: none;
+}
+/* about us style start*/
+.flex-container {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  flex: 50%;
+  align-items: center;
+}
+
+
+
+
+.flex-item-right {
+  
+  padding: 10px;
+  padding-top: 100px;
+  flex: 50%;
+  float:left;
+  align-items: center;
+}/* about us style closed*/
+
+/*product*/
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+
+
+.product-card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-title {
+  font-size: 24px;
+  font-family:'Courier New', Courier, monospace;
+  margin: 0;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  margin: 0;
+  text-align: center;
+}
+
+.add-to-cart-btn,
+.view-btn {
+  background-color: cornflowerblue;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.add-to-cart-btn:hover,
+.view-btn:hover { 
+  opacity: 0.8;
+}
+/*product closed*/
+
+@media (max-width:940px)
+{
+    nav ul {
+        position: fixed;
+        top:40px;
+        left:-110%;
+        background-color: indigo;
+        z-index: 1;
+        height: 100vh;
+        width:50%;
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+        transition: all 0.3s ease;
+      
+    }
+ #click:checked ~ul{
+    left: 0%;
+ }
+    nav ul li{
+        
+        margin: 10px 0;
+        
+     
+    }
+    container{
+        height: auto;
+        width: 100%;
+    }
+ 
+    nav .menu-btn{
+        display: block;
+    }
+    .prev{display: none;}
+    .next{display: none;}
+    .flex-container {
+      flex-direction: column;
+      
+    }
+    .flex-item-right{padding-top: 1px;
+    width: 460px;}
+    .flex-item-left{
+      padding-left: 10px;
+      width: 90%;
+      
+    }
+
+    .product-card{
+      width: 80%;
+      
+    }
+}
+
+
+
+/*.container{
+    height: 600px;
+    width: 100%;
+    background-image:url("image/toilet\ cleaner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation-name: ambuj;
+    animation-duration: 10s;
+    animation-timing-function:liner;
+    animation-iteration-count: infinite;
+}
+@keyframes ambuj{
+    1%{background-image:url("image/toilet\ cleaner.jpg" );}
+    35%{background-image:url("image/3850439.jpg" )};
+    75%{background-image:url("image/tdmd_ntif_210826.jpg" )}
+    
+}*/
+.slider {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    width: 50%; /* 5 slides */
+    animation: slide 10s infinite;
+  }
+  
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    opacity: 1;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
+  
+
+
+/* Customize these styles based on your design preferences */
+
+
+/*contact*/
+.contact-us {
+  padding: 20px;
+  
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group {
+  margin-bottom: 10px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+
+/*fotter style*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+.footer-copyright { padding: 0 350px 0 350px ;
+  margin-top: 20px;  
+  
+}
+
